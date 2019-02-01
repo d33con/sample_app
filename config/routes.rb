@@ -10,5 +10,14 @@ Rails.application.routes.draw do
   get  '/login',     to: 'sessions#new'
   post '/login',     to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
-  resources :users
+  resources :users 
+  # creates 7 routes in app
+  # Verb       Path            Controller#action
+  # GET        /users          users#index
+  # GET        /users/new      users#new
+  # POST       /users          users#create
+  # GET        /users/:id      users#show
+  # GET        /users/:id/edit users#edit
+  # PATCH/PUT  /users/:id      users#update
+  # DELETE     /users/:id      users#destroy
 end
